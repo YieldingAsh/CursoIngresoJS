@@ -12,11 +12,31 @@ var contadorIntentos;
 
 function comenzar()
 {
-  return Math.floor(Math.random() * 101) = numeroSecreto;
+  contadorIntentos = 0;
+  document.getElementById("txtIdIntentos").value = null;
+  document.getElementById("txtIdNumero").value = null;
+  numeroSecreto = Math.floor(Math.random() * 101);
+  return numeroSecreto, contadorIntentos;
 }
 
-function verificar(numeroSecreto)
+function verificar()
 {
-	
-	
+  let numero = parseInt(document.getElementById("txtIdNumero").value);
+	if (numero == numeroSecreto)
+  {
+    alert("Usted es un ganador!!! y en solo " + contadorIntentos + " intentos")
+  }
+  else
+  {
+    contadorIntentos = contadorIntentos + 1;
+    document.getElementById("txtIdIntentos").value = contadorIntentos;
+    if (numero < numeroSecreto)
+    {
+    alert("falta…")
+    }
+    else
+    {
+    alert("se pasó…")
+    }
+  }
 }
