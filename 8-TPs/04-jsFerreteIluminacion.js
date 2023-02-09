@@ -11,56 +11,49 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 function CalcularPrecio () 
 {
     let cantidad = parseInt(document.getElementById("txtIdCantidad").value);
-    let marca = document.getElementById("Marca").value
-    let precio = 35 * cantidad
+    let marca = document.getElementById("Marca").value;
+    let precio = 35 * cantidad;
+    let descuento = 0;
     if(cantidad == 6)
     {
-        let total = ((50 * precio) / 100);
-        document.getElementById("txtIdprecioDescuento").value = total
+        descuento = 50;
     }
     else if(cantidad == 5)
     {
        if(marca == "ArgentinaLuz")
        {
             
-            let total = ((60 * precio) / 100);
-            document.getElementById("txtIdprecioDescuento").value = total
+            descuento = 60;
        }
        else
        {
-        let total = ((70 * precio) / 100);
-        document.getElementById("txtIdprecioDescuento").value = total  
+            descuento = 70;
         }
     }
     else if(cantidad == 4)
     {
         if(marca == "ArgentinaLuz" || marca == "FelipeLamparas")
         {
-            let total = ((75 * precio) / 100);
-            document.getElementById("txtIdprecioDescuento").value = total     
+            descuento = 75;
         }
         else
         {
-            let total = ((80 * precio) / 100);
-            document.getElementById("txtIdprecioDescuento").value  = total     
+            descuento = 80;
         }
     }
     else if(cantidad == 3)
     {
         if(marca == "ArgentinaLuz")
         {
-            let total = ((85 * precio) / 100);
-            document.getElementById("txtIdprecioDescuento").value = total      
+            descuento = 85; 
         }
         else if (marca == "FelipeLamparas")
         {
-            let total = ((90 * precio) / 100);
-            document.getElementById("txtIdprecioDescuento").value = total       
+            descuento = 90;
         }
         else
         {
-            let total = ((95 * precio) / 100);
-            document.getElementById("txtIdprecioDescuento").value = total       
+            descuento = 95;
         }
     }
     else
@@ -68,11 +61,13 @@ function CalcularPrecio ()
         alert("No hay descuento para su compra, su precio final sin descuento es de " + precio)
     }
 
+    let total = ((descuento * precio) / 100);
+    document.getElementById("txtIdprecioDescuento").value = total;
     if(parseInt(document.getElementById("txtIdprecioDescuento").value) > 120)
         {
             let total = ((110 * precio) / 100);
-            document.getElementById("txtIdprecioDescuento").value = total
-            alert("”IIBB Usted pago " + (total - precio))
+            document.getElementById("txtIdprecioDescuento").value = total;
+            alert("”IIBB Usted pago " + (total - precio));
         }  
 }
 
