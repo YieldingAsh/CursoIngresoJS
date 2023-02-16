@@ -1,16 +1,16 @@
 function mostrar() {
 	var estacionIngresada = txtIdEstacion.value;
 	var destino = txtIdDestino.value;
-	var aumento = 0
-	var descuento = 0
-	if (estacionIngresada = "Invierno") 
+	let aumento = 0
+	let descuento = 0
+	if (estacionIngresada == "Invierno") 
 	{
 		switch (destino) 
 		{
 			case ("Bariloche"):
 				aumento = 20;
 				break;
-			case ("Mar de plata"):
+			case ("Mar del plata"):
 				descuento = 20;
 				break;
 			default:
@@ -18,14 +18,14 @@ function mostrar() {
 				break;
 		}
 	}
-	else if (estacionIngresada = "Verano")
+	else if (estacionIngresada == "Verano")
 	{
 		switch (destino) 
 		{
 			case ("Bariloche"):
 				descuento = 20;
 				break;
-			case ("Mar de plata"):
+			case ("Mar del plata"):
 				aumento = 20;
 				break;
 			default:
@@ -40,7 +40,7 @@ function mostrar() {
 			case ("Bariloche"):
 				aumento = 10;
 				break;
-			case ("Mar de plata"):
+			case ("Mar del plata"):
 				aumento = 10;
 				break;
 			case ("Cataratas"):
