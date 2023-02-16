@@ -17,7 +17,8 @@ function mostrar()
 		case("Diciembre"):
 			mensaje = "Felices fiesta!!!."
 			break;
-
+		default:
+			mensaje = "Nada interesante pasa en este mes";
 	}
 	
 	alert(mensaje);
