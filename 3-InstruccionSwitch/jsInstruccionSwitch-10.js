@@ -1,7 +1,7 @@
 function mostrar() {
 	var estacionIngresada = txtIdEstacion.value;
 	var destino = txtIdDestino.value;
-	if (estacionIngresada = "Invierno") 
+	if (estacionIngresada == "Invierno") 
 	{
 		switch (destino) 
 		{
@@ -13,11 +13,11 @@ function mostrar() {
 				break;
 		}
 	}
-	else if (estacionIngresada = "Verano")
+	else if (estacionIngresada == "Verano")
 	{
 		switch (destino) 
 		{
-			case ("Mar de plata"):
+			case ("Mar del plata"):
 			case ("Cataratas"):
 				estacionIngresada = "se viaja";
 				break;
@@ -26,7 +26,7 @@ function mostrar() {
 				break;
 		}
 	}
-	else if(estacionIngresada = "Primavera")
+	else if(estacionIngresada == "Primavera")
 	{
 		switch(destino)
 		{
