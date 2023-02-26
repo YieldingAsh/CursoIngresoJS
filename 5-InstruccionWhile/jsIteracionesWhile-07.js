@@ -4,14 +4,36 @@ e informar la suma acumulada y el promedio.
 */
 function mostrar()
 {
-	var contador;
-	var acumulador;
-	var respuesta;
+	let contador;
+	let acumulador;
+	let respuesta;
+	let numeroIngresado;
 	contador=0;
 	acumulador=0;
-	respuesta='si';
+	respuesta="NO";
+	while (respuesta != "SI")
+	{
+		contador++;
+		numeroIngresado = prompt("Ingrese el numero" + contador + " (cuando desee ver el resultado ponga SI)");
+		if (numeroIngresado == "SI")
+		{
+			contador--;
+			respuesta = "SI";
+			alert("Informando cuenta");
+			break;
+		}
 
-
+		numeroIngresado = parseInt(numeroIngresado);
+		if(numeroIngresado <= 0 || numeroIngresado >= 0)
+		{
+			acumulador = acumulador + numeroIngresado;
+		}
+		else
+		{
+			alert("ingrese un numero valido porfavor");
+			contador--;
+		}
+	}
 	txtIdSuma.value=acumulador;
 	txtIdPromedio.value=acumulador/contador;
 
