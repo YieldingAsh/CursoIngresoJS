@@ -6,19 +6,19 @@ function mostrar()
 {
 	let contador;
 	let acumulador;
-	let respuesta;
+	let parar;
 	let numeroIngresado;
 	contador=0;
 	acumulador=0;
-	respuesta="NO";
-	while (respuesta != "SI")
+	parar ="NO";
+	while (parar != "SI")
 	{
 		contador++;
 		numeroIngresado = prompt("Ingrese el numero" + contador + " (cuando desee ver el resultado ponga SI)");
 		if (numeroIngresado == "SI")
 		{
 			contador--;
-			respuesta = "SI";
+			parar = "SI";
 			alert("Informando cuenta");
 			break;
 		}
